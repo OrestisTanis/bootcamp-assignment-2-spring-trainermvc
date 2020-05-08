@@ -4,14 +4,53 @@
     Author     : Walter
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--  Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title>List of Trainers</title>
+
+        <!-- CSS-->
+        <style>
+            * {
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <h1>List of Trainers</h1>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-9">
+                    <table class="table table-sm-responsive">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col" >First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col" colspan="2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${trainers}" var="trainer">
+                                <tr>
+                                    <th scope="row">${trainer.id}</th>
+                                    <td>${trainer.firstName}</td>
+                                    <td>${trainer.lastName}</td>
+                                    <td>${trainer.subject}</td>
+                                    <td><a href="<c:url value="edit/${trainer.id}" />">edit</a></td>
+                                    <td><a href="<c:url value="delete/${trainer.id}" />">delete</a></td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

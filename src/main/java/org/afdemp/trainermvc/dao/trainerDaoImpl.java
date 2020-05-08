@@ -7,16 +7,20 @@ package org.afdemp.trainermvc.dao;
 
 import java.util.List;
 import org.afdemp.trainermvc.entities.Trainer;
+import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Walter
  */
-public class trainerDaoImpl implements ITrainerDao {
+@Repository("trainerDao")
+public class trainerDaoImpl extends AbstractDao<Integer, Trainer> implements ITrainerDao {
 
     @Override
     public List<Trainer> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Criteria criteria = createEntityCriteria();
+        return (List<Trainer>) criteria.list();
     }
 
     @Override

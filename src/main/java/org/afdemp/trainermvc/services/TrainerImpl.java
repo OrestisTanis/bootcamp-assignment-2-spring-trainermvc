@@ -6,17 +6,27 @@
 package org.afdemp.trainermvc.services;
 
 import java.util.List;
+import org.afdemp.trainermvc.dao.ITrainerDao;
 import org.afdemp.trainermvc.entities.Trainer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Walter
  */
+
+@Service("studentService")
+@Transactional
 public class TrainerImpl implements ITrainer {
+    
+    @Autowired
+    ITrainerDao dao;
 
     @Override
     public List<Trainer> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return dao.findAll();
     }
 
     @Override
