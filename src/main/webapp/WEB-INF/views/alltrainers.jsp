@@ -16,8 +16,21 @@
 
         <!-- CSS-->
         <style>
-            * {
+            table * {
                 text-align: center;
+            }
+            h1 {
+                text-align: center;
+            }
+            button {
+                background-color: #343A40 !important;
+                border-color:#343A40 !important;
+            }
+            button > a {
+                color: white;
+            }
+            a:hover {
+                color: white;
             }
         </style>
     </head>
@@ -25,8 +38,8 @@
         <h1>List of Trainers</h1>
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-9">
-                    <table class="table table-sm-responsive">
+                <div class="col-12 col-md-9 d-flex flex-column">
+                    <table class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">ID</th>
@@ -49,6 +62,7 @@
                             </c:forEach>
                         </tbody>
                     </table>
+                    <button class="btn btn-secondary ml-auto"><a href="<c:url value='/new' />">Create new trainer</a></button>
                 </div>
             </div>
         </div>

@@ -19,8 +19,6 @@ public interface ITrainer {
     
     public boolean update(Trainer trainer);
     
-    public boolean edit(long id);
-    
     public boolean delete(long id);
     
     public Trainer findById(long id);

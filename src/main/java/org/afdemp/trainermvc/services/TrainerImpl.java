@@ -31,27 +31,35 @@ public class TrainerImpl implements ITrainer {
 
     @Override
     public boolean save(Trainer trainer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        convertTrainerPropertiesToUpper(trainer);
+        return dao.save(trainer);
     }
 
     @Override
     public boolean update(Trainer trainer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean edit(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        convertTrainerPropertiesToUpper(trainer);
+        //return dao.update(trainer); when finally calling save in trainerDaoImpl, abstractDao's persist method returns the opposite result than it is expected
+        dao.update(trainer);
+        return true;
     }
 
     @Override
     public boolean delete(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.delete(id);
     }
 
     @Override
     public Trainer findById(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.findById(id);
     }
     
+    protected String convertTextToUpper(String text) {
+        return text.toUpperCase();
+    }
+    
+    protected void convertTrainerPropertiesToUpper(Trainer tr){
+        tr.setFirstName(convertTextToUpper(tr.getFirstName()));
+        tr.setLastName(convertTextToUpper(tr.getLastName()));
+        tr.setSubject(convertTextToUpper(tr.getSubject()));
+    }
 }
