@@ -96,7 +96,7 @@ public class TrainerController {
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteStudent(ModelMap view, @PathVariable int id) {
         if(trainerService.delete(id)) {
-            view.addAttribute("msg", new String("Trainer Deleted Successfully!"));
+            view.addAttribute("msg", new String("Trainer deleted successfully!"));
         } else {
             view.addAttribute("msg", new String("There was a problem when trying to delete the selected Trainer. Please try again."));
         }
