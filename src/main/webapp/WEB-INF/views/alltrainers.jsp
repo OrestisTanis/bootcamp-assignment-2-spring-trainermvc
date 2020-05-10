@@ -12,33 +12,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!--  Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--  Custom CSS-->
+        <link href="<c:url value='/static/css/shared.css' />" rel="stylesheet"></link>
         <title>List of Trainers</title>
-
-        <!-- CSS-->
-        <style>
-            table * {
-                text-align: center;
-            }
-            h1 {
-                text-align: center;
-            }
-            button {
-                background-color: #343A40 !important;
-                border-color:#343A40 !important;
-            }
-            button > a {
-                color: white;
-            }
-            a:hover {
-                color: white;
-            }
-        </style>
     </head>
     <body>
-        <h1>List of Trainers</h1>
-        <div class="container">
+        
+        <div class="container text-center">
+            <h1 class="mt-3"><small>List of Trainers</small></h1>
             <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-9 d-flex flex-column">
+                <div class="col-12 col-md-9 d-flex flex-column mt-4">
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
@@ -62,7 +45,7 @@
                             </c:forEach>
                         </tbody>
                     </table>
-                    <button class="btn btn-secondary ml-auto"><a href="<c:url value='/new' />">Create new trainer</a></button>
+                    <button class="btn btn-dark ml-auto"><a class="text-white" href="<c:url value='/new' />">Create new trainer</a></button>
                 </div>
             </div>
         </div>

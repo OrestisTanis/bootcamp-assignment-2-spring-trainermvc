@@ -26,12 +26,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "trainers", catalog = "trainermvc", schema = "")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Trainer.findAll", query = "SELECT t FROM Trainer t")
-    , @NamedQuery(name = "Trainer.findById", query = "SELECT t FROM Trainer t WHERE t.id = :id")
-    , @NamedQuery(name = "Trainer.findByFirstName", query = "SELECT t FROM Trainer t WHERE t.firstName = :firstName")
-    , @NamedQuery(name = "Trainer.findByLastName", query = "SELECT t FROM Trainer t WHERE t.lastName = :lastName")
-    , @NamedQuery(name = "Trainer.findBySubject", query = "SELECT t FROM Trainer t WHERE t.subject = :subject")})
 public class Trainer implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -12,31 +12,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!--  Bootstrap CSS-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">        
+        <!--  Custom CSS-->
+        <link href="<c:url value='/static/css/shared.css' />" rel="stylesheet"></link>
+        <link href="<c:url value='/static/css/errors.css' />" rel="stylesheet"></link>
         <title>Register New Trainer</title>
-        <style>
-            .error {
-                color: #ff0000;
-                display:block;
-                font-size: 0.8rem;
-            }
-            
-            button {
-                background-color: #343A40 !important;
-                border-color:#343A40 !important;
-                color: white !important;
-            }
-            button:hover {
-                text-decoration: underline !important;
-                color: white !important;
-            }
-        </style>
     </head>
     <body>
-        <h1 class="text-center mt-4">Register New Trainer</h1>
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-9 col-lg-6">
+            <div class="row d-flex justify-content-center mt-4">
+                <div class="col-10 col-sm-9 col-md-7 col-lg-5">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-1">
+                            <a href="<c:url value="/"></c:url>"><img id="back-button" class="mr-4" src="<c:url value="/static/img/svg/chevron-left.svg"/>" alt="" width="28" height="28"></a>
+                        </div>
+                        <div class="col-10">
+                            <h2 class="text-center"><small>Register New Trainer</small></h2>
+                        </div>
+                        <div class="col-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-2">
+                <div class="col-10 col-sm-9 col-md-7 col-lg-5">
                     <form:form method="POST" modelAttribute="trainer" class="mt-3">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -53,7 +53,7 @@
                             <form:input class="form-control" path="subject" id="subject" />
                             <form:errors path="subject" cssClass="error"/>
                         </div>
-                        <button type="submit" class="btn"/>Register trainer</button>
+                        <button type="submit" class="btn btn-dark"/>Register trainer</button>
                     </form:form>
                 </div>
             </div>
