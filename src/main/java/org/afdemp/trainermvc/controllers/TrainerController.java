@@ -4,7 +4,6 @@ import java.util.List;
 import javax.validation.Valid;
 import org.afdemp.trainermvc.entities.Trainer;
 import org.afdemp.trainermvc.services.ITrainer;
-import org.afdemp.trainermvc.services.TrainerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;

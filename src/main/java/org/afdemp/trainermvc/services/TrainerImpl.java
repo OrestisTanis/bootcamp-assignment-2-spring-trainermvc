@@ -1,6 +1,5 @@
 package org.afdemp.trainermvc.services;
 
-import java.util.HashMap;
 import java.util.List;
 import org.afdemp.trainermvc.dao.ITrainerDao;
 import org.afdemp.trainermvc.entities.Trainer;

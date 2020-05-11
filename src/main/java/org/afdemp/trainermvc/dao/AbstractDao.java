@@ -1,10 +1,7 @@
 package org.afdemp.trainermvc.dao;
 
 import java.io.Serializable;
-
 import java.lang.reflect.ParameterizedType;
-import org.afdemp.trainermvc.entities.Trainer;
-
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
