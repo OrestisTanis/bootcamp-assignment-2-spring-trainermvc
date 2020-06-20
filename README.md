@@ -5,4 +5,4 @@ To create the database schema and the populated table you can:
 <br/>
   
 **DB CONNECTION SETTINGS**  
-You can change the settings regarding the connection with the database in /src/main/resources/application.properties file
+You can change the settings regarding the database connection in /src/main/resources/application.properties file
