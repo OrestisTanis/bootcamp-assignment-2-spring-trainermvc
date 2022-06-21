@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springframework.version>4.3.27.RELEASE</springframework.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
-        <mysql.version>8.0.19</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <testng.version>6.9.4</testng.version>
         <mockito.version>1.10.19</mockito.version>
         <h2.version>1.4.187</h2.version>
